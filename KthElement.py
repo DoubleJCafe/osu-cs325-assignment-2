@@ -4,7 +4,7 @@
 # Assignment: 2
 # Description: Function that finds the kth element after combing 2 assorted arrays.
 
-def kth_element(arr1, arr2, k):
+def kthElement(arr1, arr2, k):
     """
 
     :param arr1:
