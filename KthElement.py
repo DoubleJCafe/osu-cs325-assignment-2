@@ -13,7 +13,7 @@ def kthElement(arr1, arr2, k):
     :return:
     """
     sortedArray = merg(arr1, arr2)
-    return sortedArray[k]
+    return sortedArray[k + 1]
 
 
 def merg(arr1, arr2):
@@ -23,18 +23,18 @@ def merg(arr1, arr2):
     while arr1Index < len(arr1) and arr2Index < len(arr2):
         if arr1[arr1Index] < arr2[arr2Index]:
             sortedArray.append(arr1[arr1Index])
-            arr1Index = arr1Index + 1
+            arr1Index += 1
         else:
             sortedArray.append(arr2[arr2Index])
-            arr2Index = arr2Index + 1
+            arr2Index += 1
 
     while arr1Index < len(arr1):
         sortedArray.append(arr1[arr1Index])
-        arr1Index = arr1Index + 1
+        arr1Index += 1
 
     while arr2Index < len(arr2):
         sortedArray.append(arr2[arr2Index])
-        arr2Index = arr2Index + 1
+        arr2Index += 1
     return sortedArray
 
 
