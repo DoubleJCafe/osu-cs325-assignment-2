@@ -17,12 +17,14 @@ def kthElement(arr1, arr2, k):
     start = 0
     arr1Length = len(arr1)
     while True:
-        if arr1Index < arr1Length and arr1[arr1Index] < arr2[arr2Index]:
+        if arr1Index < arr1Length and arr1[arr1Index] <= arr2[arr2Index]:
             start += 1
+            arr1Index += 1
             if start == k:
                 return arr1[arr1Index]
         else:
             start += 1
+            arr2Index += 1
             if start == k:
                 return arr1[arr1Index]
 
