@@ -13,7 +13,7 @@ def kthElement(arr1, arr2, k):
     :return:
     """
     sortedArray = merg(arr1, arr2)
-    return sortedArray[k + 1]
+    return sortedArray[k - 1]
 
 
 def merg(arr1, arr2):
